@@ -1,9 +1,11 @@
 public class Food {
     String foodName;
-    int nutrition;
+    String nutrition;
+    boolean isHazardous;
 
-    public Food(String foodName, int nutrition){
+    public Food(String foodName, String nutrition, boolean isHazardous){
         this.foodName= foodName;
         this.nutrition = nutrition;
+        this.isHazardous = isHazardous;
     }
 }
