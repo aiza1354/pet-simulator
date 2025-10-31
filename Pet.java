@@ -14,31 +14,20 @@ public class Pet {
     }
 
     public void view() {
-        System.out.println("Your beautiful cat is called " + name + ".\nThey are a " + gender + ".\nAt the moment they are " + age + " years old 🎉.\n Their happiness is at "+ happiness + " ☺️.\n Their fully fed level is at "+ notHungry + ".🍗\n Their energy is at" + energy + "🪫."  );
-    }
-
-    public void checkHappiness(int happiness) {
-        System.out.println("Your pet's happiness is at " + happiness + " %.");
-    }
-
-    public void checkEnergy(int energy) {
-        System.out.println("Your pet's happiness is at " + happiness + " %.");
-    }
-
-    public void checknotHungry(int notHungry) {
-        System.out.println("Your pet's notHungry is at " + notHungry + " %.");
+        System.out.println("Your beautiful cat is called " + name + ".\nThey are a " + gender + ".\nAt the moment they are " + age + " years old 🎉.\nTheir happiness is at "+ happiness + " ☺️.\nTheir fully fed level is at "+ notHungry + ".🍗\nTheir energy is at " + energy + "🪫."  );
     }
 
     public void eat() {
-        String food = scanner.nextLine();
-        if (food.equals("A") || food.equals("B") || food.equals("C")) {
+        System.out.println("Pick a food to give with your pet!\nA: Tuna\nB: Chicken\nC: Treat\nD: Grape");
+        String toy = scanner.nextLine();
+        if (toy.equals("A") || toy.equals("B") || toy.equals("C")) {
             notHungry += 10;
             energy += 10;
             System.out.println("Aww your pet loves it! Their fully fed level 🍗 has increased to  " + notHungry + " \nYour pet's happiness ☺️ has stayed the same.\nTheir energy 🪫 has increased to " + energy);
         } else {
-            notHungry -= 30;
-            energy -= 30;
-            happiness -= 30;
+            notHungry -= 25;
+            energy -= 25;
+            happiness -= 25;
             System.out.println("That was dangerous...📛\nYour pet's fully fed level 🍗 has decreased to  " + notHungry + " \nYour pet's happiness ☺️ has decreased to " + happiness + " \nYour pet's energy 🪫 has decreased to " + energy);
         }
     }
@@ -52,17 +41,18 @@ public class Pet {
                 happiness += 10;
                 System.out.println("Aww your pet is having a lot of fun! Their fully fed level 🍗 has decreased to  " + notHungry + " \nYour pet's happiness ☺️ has increased to " + happiness + " \nTheir energy 🪫 has decreased to " + energy);
             } else {
-                notHungry -= 30;
-                energy -= 30;
-                happiness -= 30;
-                System.out.println("That was dangerous...📛\nYour pet's fully fed level 🍗 has decreased to  " + notHungry + " \nYour pet's happiness ☺️ has decreased to " + happiness + " \nYour pet's energy 🪫 has decreased to " + energy);
+                notHungry -= 25;
+                energy -= 25;
+                happiness -= 25;
+                System.out.println("That was dangerous...📛\nYour pet's fully fed level 🍗 has decreased to  " + notHungry + " \nTheir happiness ☺️ has decreased to " + happiness + " \nTheir energy 🪫 has decreased to " + energy);
             }
 
         }
 
         public void sleep () {
             this.energy = this.energy + 10;
-            this.notHungry = this.notHungry + 10;
+            this.notHungry = this.notHungry - 10;
+            System.out.println("Your pet is now having a nap 😴./nYour pet's fully fed level 🍗 has decreased to  " + notHungry + " \nTheir happiness ☺️ has stayed the same as " + happiness + ".\nTheir energy 🪫 has decreased to" + energy + ".");
         }
 
         public void grow () {
